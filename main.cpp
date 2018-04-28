@@ -32,22 +32,20 @@ int main()
         arrt.show();
 
 
-    }
 
-    {
 
         std::cout << std::endl << "****************** the work with backup class object *******************" << std::endl;
-        Array a5(0);
-        //BackUp bU;
-       // a5.setBackUp(&bU);
+       // Array a5(0);
+        BackUp bU;
+        arr.setBackUp(&bU);
         //if class BackUp don't have data members but only function-members, then we don't need create
         //class instance, we can call function-member from null-class-pointer ???????
-        a5.getDataFromFile("test.txt");
-        a5.show();
-        a5.saveToFile("s1.txt", 'w');
+       // arr.getDataFromFile("test.txt");
+        arr.show();
+        arr.saveToFile("s1.txt", 'w');
 
 
-        std::cout << " testing operators overloading " << std::endl;
+        std::cout << "\n testing operators overloading " << std::endl;
         int Arr[] = { 2, 8, 9, 44, 6 };
         std::cout << "sizeof(Arr) " << sizeof(Arr) <<  std::endl;
         Array Ar(Arr, sizeof(Arr) / sizeof(int));
